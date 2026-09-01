@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "protein-folding"
+version = "0.1.0"
+description = "Hybrid AlphaFold 2 / quantum VQE pipeline for protein structure prediction"
+requires-python = ">=3.10"
+dependencies = [
+    "qiskit>=1.0",
+    "qiskit-aer>=0.13",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "biopython>=1.81",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+alphafold = ["alphafold", "jax[cuda]", "openmm"]
+dev = ["pytest>=7.0", "ruff>=0.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
