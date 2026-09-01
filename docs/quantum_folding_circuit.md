@@ -193,6 +193,17 @@ $$
     \langle 0| U^{\dagger}(\vec\theta)\, H_{\mathrm{fold}}\, U(\vec\theta) |0\rangle
 $$
 
-The Hamiltonian $H_{\mathrm{fold}}$ (not constructed in the notebook) typically
-includes nearest-neighbour interaction energies and penalty terms that enforce
-the self-avoidance constraint on the lattice.
+The Hamiltonian $H_{\mathrm{fold}}$ is constructed in `hamiltonian.py` and
+includes nearest-neighbour contact energies and a penalty term that enforces
+the self-avoidance constraint on the lattice.  See
+[hamiltonian.md](hamiltonian.md) for the full specification.
+
+## Related Documentation
+
+- [pipeline.md](pipeline.md) — Hybrid AlphaFold 2 / quantum VQE pipeline
+  overview
+- [hamiltonian.md](hamiltonian.md) — Energy Hamiltonian construction
+- [vqe_runner.md](vqe_runner.md) — VQE optimisation loop
+- [decoder.md](decoder.md) — Bitstring decoding and PDB export
+- [confidence_gate.md](confidence_gate.md) — AlphaFold pLDDT confidence
+  evaluation
